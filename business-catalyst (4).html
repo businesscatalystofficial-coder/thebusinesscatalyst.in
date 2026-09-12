@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Catalyst | AI-Powered Business Solutions</title>
+<meta name="description" content="Business Catalyst provides AI automation, custom CRM, website development, mobile apps, WhatsApp automation, digital marketing, SEO, lead generation and BPO solutions for modern businesses.">
+<meta name="keywords" content="AI automation company, AI business automation, custom CRM development, website development, mobile app development, WhatsApp automation, BPO services, BPO company, lead generation, digital marketing, SEO services, AI chatbot, business automation, Business Catalyst">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Business Catalyst | AI-Powered Business Solutions">
+<meta property="og:description" content="AI, automation, CRM, software, digital growth and BPO solutions for modern businesses.">
+<meta property="og:site_name" content="Business Catalyst">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Business Catalyst",
+  "slogan": "AI-Powered Business Solutions",
+  "description": "AI automation, custom CRM, website and mobile app development, WhatsApp automation, digital marketing, SEO and BPO services.",
+  "email": "businesscatalystofficial@gmail.com",
+  "telephone": "+91-94584-58374",
+  "areaServed": "IN",
+  "sameAs": ["https://www.google.com/maps/place/?q=place_id:ChIJ88PD9Wp7DDkRJLB-tMzd4-g"],
+  "founder": {
+    "@type": "Person",
+    "name": "Apoorv Mudgal"
+  },
+  "taxID": "09IMGPM6408A1Z2",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C 90/1, Garh Road",
+    "addressLocality": "Meerut",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "250004",
+    "addressCountry": "IN"
+  }
+}
+</script>
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   Brand blue is a PLACEHOLDER (--blue). Replace with the exact
+   hex sampled from the Business Catalyst logo file.
+   ============================================================ */
+:root{
+  --paper:#ffffff;
+  --mist:#f4f8fc;
+  --line:#dfe8f2;
+  --line-soft:#edf3f9;
+  --ink:#212836;
+  --ink-2:#333c4e;
+  --slate:#5b697e;
+  --slate-2:#8593a6;
+  /* sampled from the logo file: mark #3AB5FD, wordmark #282F40 */
+  --brand:#3AB5FD;          /* the logo blue — decoration, glows, rings */
+  --blue:#0579BD;           /* accessible tint of it — text, icons, buttons (4.7:1 on white) */
+  --blue-deep:#046095;
+  --blue-wash:#e6f6ff;
+  --blue-glow:rgba(58,181,253,.2);
+  --wa:#22a45d;
+
+  --shadow-sm:0 1px 2px rgba(11,27,51,.04), 0 2px 8px rgba(11,27,51,.04);
+  --shadow-md:0 2px 4px rgba(11,27,51,.03), 0 12px 32px rgba(11,27,51,.07);
+  --shadow-lg:0 8px 20px rgba(11,27,51,.06), 0 32px 64px rgba(11,27,51,.10);
+
+  --r-card:16px;
+  --r-lg:22px;
+  --r-pill:999px;
+
+  --wrap:1180px;
+  --gut:clamp(20px,5vw,40px);
+  --sec:clamp(72px,9vw,124px);
+
+  --ease:cubic-bezier(.22,.72,.28,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+
+/* ---------- layout primitives ---------- */
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.section{padding-block:var(--sec)}
+.section--mist{background:var(--mist);border-block:1px solid var(--line-soft)}
+.stack-sm>*+*{margin-top:14px}
+
+/* ---------- type ---------- */
+h1,h2,h3,h4{line-height:1.12;letter-spacing:-.028em;font-weight:700;color:var(--ink)}
+h1{font-size:clamp(2.4rem,5.6vw,4rem);font-weight:800;letter-spacing:-.036em}
+h2{font-size:clamp(1.9rem,3.7vw,2.85rem)}
+h3{font-size:1.1rem;letter-spacing:-.018em}
+p{color:var(--slate)}
+.lead{font-size:clamp(1.02rem,1.55vw,1.18rem);line-height:1.62;max-width:62ch;color:var(--slate)}
+.sec-head{max-width:64ch;margin-bottom:clamp(38px,5vw,58px)}
+.sec-head p{margin-top:16px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 24px;border-radius:var(--r-pill);border:1px solid transparent;
+  font-size:.945rem;font-weight:600;letter-spacing:-.01em;cursor:pointer;
+  transition:transform .22s var(--ease),box-shadow .22s var(--ease),background .18s,border-color .18s,color .18s;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px)}
+.btn--primary{background:var(--blue);color:#fff;box-shadow:0 2px 6px rgba(5,121,189,.24),0 12px 26px rgba(5,121,189,.20)}
+.btn--primary:hover{background:var(--blue-deep);box-shadow:0 4px 10px rgba(5,121,189,.26),0 18px 38px rgba(5,121,189,.26);transform:translateY(-1px)}
+.btn--ghost{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--shadow-sm)}
+.btn--ghost:hover{border-color:#c9d6ea;box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.btn--wa{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--shadow-sm)}
+.btn--wa:hover{border-color:#bfe4d0;background:#f6fdf9;transform:translateY(-1px)}
+.btn--wa svg{color:var(--wa)}
+.btn--sm{padding:10px 18px;font-size:.885rem}
+.btn--block{width:100%}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+.txtlink{color:var(--blue);font-weight:600;font-size:.955rem;display:inline-flex;align-items:center;gap:7px}
+.txtlink span{transition:transform .22s var(--ease)}
+.txtlink:hover span{transform:translateX(4px)}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:80;
+  background:rgba(255,255,255,0);
+  border-bottom:1px solid transparent;
+  transition:background .3s var(--ease),border-color .3s,box-shadow .3s,backdrop-filter .3s;
+}
+.nav.is-stuck{
+  background:rgba(255,255,255,.82);
+  backdrop-filter:saturate(180%) blur(16px);
+  -webkit-backdrop-filter:saturate(180%) blur(16px);
+  border-bottom-color:var(--line-soft);
+  box-shadow:0 1px 20px rgba(11,27,51,.05);
+}
+.nav__in{max-width:var(--wrap);margin-inline:auto;padding:0 var(--gut);height:72px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand__mark{width:auto;display:block}
+.brand__name{font-weight:700;font-size:.855rem;letter-spacing:.055em;text-transform:uppercase;line-height:1.05;color:var(--ink)}
+.brand__name b{color:var(--blue);font-weight:700}
+.brand__name small{display:block;font-size:.495rem;font-weight:600;letter-spacing:.1em;color:var(--slate-2);margin-top:4px;text-transform:uppercase}
+.nav__links{display:flex;gap:4px;margin-left:auto}
+.nav__links a{
+  padding:8px 14px;border-radius:var(--r-pill);font-size:.92rem;font-weight:500;color:var(--ink-2);
+  transition:background .16s,color .16s;
+}
+.nav__links a:hover{background:var(--blue-wash);color:var(--blue-deep)}
+.nav__links a.is-active{color:var(--blue);font-weight:600}
+.nav__cta{display:flex;gap:10px;align-items:center}
+.nav__burger{display:none;width:42px;height:42px;border:1px solid var(--line);background:#fff;border-radius:12px;align-items:center;justify-content:center;cursor:pointer}
+.nav__burger span{display:block;width:17px;height:1.6px;background:var(--ink);position:relative;transition:background .2s}
+.nav__burger span::before,.nav__burger span::after{content:'';position:absolute;left:0;width:17px;height:1.6px;background:var(--ink);transition:transform .26s var(--ease)}
+.nav__burger span::before{top:-5.5px}
+.nav__burger span::after{top:5.5px}
+.nav.is-open .nav__burger span{background:transparent}
+.nav.is-open .nav__burger span::before{transform:translateY(5.5px) rotate(45deg)}
+.nav.is-open .nav__burger span::after{transform:translateY(-5.5px) rotate(-45deg)}
+
+.mobile-panel{
+  display:none;background:#fff;border-bottom:1px solid var(--line);
+  padding:8px var(--gut) 22px;box-shadow:var(--shadow-md);
+}
+.nav.is-open .mobile-panel{display:block}
+.mobile-panel a.m-link{display:block;padding:13px 4px;font-size:1.02rem;font-weight:500;border-bottom:1px solid var(--line-soft)}
+.mobile-panel a.m-link.is-active{color:var(--blue)}
+.mobile-panel .btn-row{margin-top:18px}
+
+/* ============================================================
+   CARDS / GRIDS
+   ============================================================ */
+.grid{display:grid;gap:18px}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:26px 24px;
+  transition:border-color .22s var(--ease),box-shadow .26s var(--ease),transform .26s var(--ease);
+}
+.card:hover{border-color:#cfdcef;box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.card h3{margin-bottom:9px}
+.card p{font-size:.9rem;line-height:1.55}
+.ico{
+  width:42px;height:42px;border-radius:12px;background:var(--blue-wash);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.card--flat{padding:22px;background:var(--mist);border-color:transparent}
+.card--flat:hover{transform:none;border-color:var(--line);box-shadow:none}
+
+/* service category block */
+.cat{margin-top:clamp(52px,6vw,76px)}
+.cat__head{display:flex;align-items:baseline;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.cat__head h2{font-size:clamp(1.35rem,2.3vw,1.72rem)}
+.cat__count{font-size:.8rem;font-weight:600;color:var(--slate-2);margin-left:auto;flex-shrink:0}
+
+/* BPO feature band */
+.band{
+  background:linear-gradient(158deg,#151d2b 0%,#12314c 56%,#0a5f96 100%);
+  border-radius:var(--r-lg);padding:clamp(34px,5vw,58px);color:#fff;position:relative;overflow:hidden;
+}
+.band::after{
+  content:'';position:absolute;width:420px;height:420px;right:-90px;top:-140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(58,181,253,.5) 0%,rgba(58,181,253,0) 68%);pointer-events:none;
+}
+.band h2,.band h3{color:#fff;position:relative;z-index:1}
+.band p{color:rgba(255,255,255,.72);position:relative;z-index:1}
+.band .lead{color:rgba(255,255,255,.76)}
+.band__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0 30px;position:relative;z-index:1}
+.band__item{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:13px;padding:17px 18px;
+  transition:background .2s,border-color .2s;
+}
+.band__item:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}
+.band__item h4{font-size:.895rem;font-weight:650;color:#fff;margin-bottom:5px;letter-spacing:-.01em}
+.band__item p{font-size:.8rem;line-height:1.48;color:rgba(255,255,255,.6)}
+.band .btn--ghost{background:rgba(255,255,255,.95);border-color:transparent}
+.band__cta{position:relative;z-index:1}
+
+/* solutions */
+.sol{display:flex;flex-direction:column;height:100%}
+.sol__tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 20px}
+.sol__tags span{font-size:.735rem;font-weight:500;color:var(--slate);background:var(--mist);border:1px solid var(--line-soft);padding:4px 10px;border-radius:var(--r-pill)}
+.sol .txtlink{margin-top:auto}
+
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.filter{
+  padding:8px 16px;border-radius:var(--r-pill);border:1px solid var(--line);background:#fff;
+  font-size:.875rem;font-weight:500;color:var(--slate);cursor:pointer;transition:all .18s;
+}
+.filter:hover{border-color:#c9d6ea;color:var(--ink)}
+.filter.is-on{background:var(--ink);border-color:var(--ink);color:#fff}
+.work{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;transition:box-shadow .26s var(--ease),transform .26s var(--ease),border-color .22s}
+.work:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:#cfdcef}
+.work__shot{aspect-ratio:16/10;background:linear-gradient(150deg,#e6f6ff,#f7faff 55%,#dbeffc);border-bottom:1px solid var(--line-soft);position:relative;display:flex;align-items:center;justify-content:center;padding:22px}
+.work__mock{width:100%;max-width:290px;background:#fff;border-radius:11px;box-shadow:var(--shadow-md);overflow:hidden;border:1px solid var(--line-soft)}
+.work__bar{height:23px;background:var(--mist);border-bottom:1px solid var(--line-soft);display:flex;align-items:center;gap:4px;padding:0 9px}
+.work__bar i{width:6px;height:6px;border-radius:50%;background:#d6dfec}
+.work__body{padding:14px 14px 18px}
+.work__line{height:7px;border-radius:4px;background:var(--line-soft);margin-bottom:7px}
+.work__line--t{background:var(--blue);opacity:.28;width:52%;height:9px;margin-bottom:11px}
+.work__line--s{width:78%}
+.work__line--x{width:40%}
+.work__info{padding:22px 24px 26px}
+.work__ind{font-size:.775rem;font-weight:600;color:var(--blue);margin-bottom:7px}
+.work__info h3{font-size:1.18rem;margin-bottom:9px}
+.work__info p{font-size:.885rem;line-height:1.55}
+.work__stack{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 18px}
+.work__stack span{font-size:.72rem;font-weight:500;color:var(--slate);background:var(--mist);padding:4px 9px;border-radius:6px;border:1px solid var(--line-soft)}
+
+/* ---------- branded project card (e.g. DelhiDrive's own black/green identity) ---------- */
+.work--brand:hover{border-color:color-mix(in srgb, var(--w-accent) 45%, var(--line))}
+.work--brand .work__shot{background:linear-gradient(150deg,var(--w-ink) 0%,#111a14 62%,var(--w-ink) 100%)}
+.work__shot--wordmark{flex-direction:column;gap:10px}
+.dd-word{font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:clamp(1.5rem,4vw,2.15rem);letter-spacing:-.01em;line-height:1;text-transform:uppercase;white-space:nowrap}
+.dd-word__delhi{color:#0fa864}
+.dd-word__drive{color:#fff;-webkit-text-stroke:1.4px #000;paint-order:stroke fill;text-stroke:1.4px #000}
+.dd-word__tag{display:flex;align-items:center;gap:12px;font-size:.66rem;font-weight:700;letter-spacing:.24em;color:rgba(255,255,255,.75);text-transform:uppercase}
+.dd-word__tag::before,.dd-word__tag::after{content:'';flex:0 0 26px;height:1px;background:rgba(255,255,255,.5)}
+.work--brand .work__mock{background:#0d1512;border-color:rgba(34,197,94,.18)}
+.work--brand .work__bar{background:#0a0f0c;border-bottom-color:rgba(34,197,94,.14)}
+.work--brand .work__bar i{background:rgba(34,197,94,.35)}
+.work--brand .work__line{background:rgba(255,255,255,.09)}
+.work--brand .work__line--t{background:var(--w-accent);opacity:.9}
+.work--brand .work__ind{color:var(--w-accent)}
+.work--brand .work__stack span{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.2);color:#1a7a44}
+.work--brand .txtlink{color:var(--w-accent)}
+.empty{
+  grid-column:1/-1;border:1px dashed var(--line);border-radius:var(--r-card);padding:46px 30px;text-align:center;background:var(--mist);
+}
+.empty h3{margin-bottom:8px}
+.empty p{font-size:.9rem;max-width:44ch;margin:0 auto 20px}
+
+/* process steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;background:#fff}
+.step{padding:28px 26px;border-right:1px solid var(--line)}
+.step:last-child{border-right:none}
+.step__n{
+  font-size:.78rem;font-weight:700;color:var(--blue);letter-spacing:.04em;
+  display:flex;align-items:center;gap:9px;margin-bottom:14px;
+}
+.step__n::after{content:'';flex:1;height:1px;background:var(--line)}
+.step h3{font-size:1.02rem;margin-bottom:8px}
+.step p{font-size:.87rem;line-height:1.52}
+
+/* about focus list */
+.focus{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.focus span{
+  padding:9px 17px;border-radius:var(--r-pill);background:#fff;border:1px solid var(--line);
+  font-size:.885rem;font-weight:500;color:var(--ink-2);box-shadow:var(--shadow-sm);
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(28px,4.5vw,54px);align-items:start}
+.reach{background:var(--mist);border:1px solid var(--line-soft);border-radius:var(--r-card);padding:26px 24px}
+.reach+.reach{margin-top:16px}
+.reach__label{font-size:.79rem;font-weight:600;color:var(--slate-2);margin-bottom:7px}
+.reach__val{font-size:1.16rem;font-weight:700;letter-spacing:-.024em;margin-bottom:16px;word-break:break-word}
+
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,3.4vw,36px);box-shadow:var(--shadow-md)}
+.field{margin-bottom:17px}
+.field label{display:block;font-size:.855rem;font-weight:600;color:var(--ink-2);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;
+  font-size:.94rem;transition:border-color .16s,box-shadow .16s;
+}
+.field textarea{resize:vertical;min-height:118px;line-height:1.55}
+.field select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235b697e' stroke-width='2.2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 13px center;padding-right:40px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3.5px rgba(5,121,189,.11)}
+.field.has-error input,.field.has-error select,.field.has-error textarea{border-color:#d64545;box-shadow:0 0 0 3.5px rgba(214,69,69,.09)}
+.err{display:none;font-size:.79rem;color:#c23434;margin-top:6px;font-weight:500}
+.field.has-error .err{display:block}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form__note{font-size:.79rem;color:var(--slate-2);margin-top:14px;line-height:1.5}
+
+.done{text-align:center;padding:34px 20px}
+.done__mark{
+  width:56px;height:56px;border-radius:50%;background:var(--blue-wash);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;
+  animation:pop .45s var(--ease);
+}
+@keyframes pop{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+.done h3{font-size:1.32rem;margin-bottom:10px}
+.done p{max-width:38ch;margin:0 auto 24px;font-size:.945rem}
+
+/* ============================================================
+   FINAL CTA + FOOTER
+   ============================================================ */
+.finale{background:var(--mist);border-top:1px solid var(--line-soft);padding-block:clamp(58px,7vw,90px);text-align:center}
+.finale h2{margin-bottom:14px}
+.finale p{margin:0 auto 30px;max-width:46ch}
+.finale .btn-row{justify-content:center}
+
+.foot{background:#fff;border-top:1px solid var(--line);padding-top:clamp(48px,6vw,68px)}
+.foot__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:clamp(24px,4vw,48px)}
+.foot__about p{font-size:.885rem;line-height:1.6;margin-top:16px;max-width:36ch}
+.foot h4{font-size:.815rem;font-weight:700;color:var(--ink);margin-bottom:15px;letter-spacing:-.005em}
+.foot ul{list-style:none}
+.foot li{margin-bottom:9px}
+.foot li a{font-size:.875rem;color:var(--slate);transition:color .16s}
+.foot li a:hover{color:var(--blue)}
+.foot__contact a{display:flex;align-items:center;gap:10px;font-size:.885rem;color:var(--slate);margin-bottom:12px;transition:color .16s}
+.foot__contact a:hover{color:var(--blue)}
+.foot__contact svg{flex-shrink:0;color:var(--slate-2)}
+.foot__trust{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:clamp(40px,5vw,58px);padding-top:24px;border-top:1px solid var(--line-soft)}
+.foot__trust-label{font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--slate-2);margin-right:2px}
+.trust-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--r-pill);border:1px solid var(--line);background:var(--mist);font-size:.78rem;color:var(--ink-2);white-space:nowrap}
+.trust-chip svg{color:var(--blue);flex-shrink:0}
+.trust-chip b{font-weight:700;color:var(--ink);letter-spacing:.01em}
+.trust-chip--link{transition:border-color .18s,background .18s}
+.trust-chip--link:hover{border-color:rgba(5,121,189,.35);background:var(--blue-wash)}
+.foot__bar{padding-block:22px 0;font-size:.82rem;color:var(--slate-2)}
+
+/* ============================================================
+   FLOATING WHATSAPP + CHATBOT
+   ============================================================ */
+.wa-float{
+  position:fixed;right:20px;bottom:20px;z-index:70;width:54px;height:54px;border-radius:50%;
+  background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 16px rgba(34,164,93,.34),0 18px 40px rgba(34,164,93,.24);
+  transition:transform .24s var(--ease);
+}
+.wa-float:hover{transform:scale(1.06)}
+
+.bot-btn{
+  position:fixed;right:20px;bottom:86px;z-index:70;height:48px;padding:0 18px 0 14px;border-radius:var(--r-pill);
+  background:var(--ink);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;gap:9px;
+  font-size:.885rem;font-weight:600;box-shadow:var(--shadow-lg);transition:transform .24s var(--ease),background .2s;
+}
+.bot-btn:hover{background:#12314c;transform:translateY(-2px)}
+.bot-btn__dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:live 2.4s infinite}
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(74,222,128,.55)}70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+
+.bot{
+  position:fixed;right:20px;bottom:20px;z-index:90;width:min(374px,calc(100vw - 32px));
+  height:min(560px,calc(100vh - 40px));background:#fff;border:1px solid var(--line);
+  border-radius:20px;box-shadow:0 12px 30px rgba(11,27,51,.13),0 40px 80px rgba(11,27,51,.18);
+  display:none;flex-direction:column;overflow:hidden;
+}
+.bot.is-open{display:flex;animation:botIn .3s var(--ease)}
+@keyframes botIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.bot__top{padding:15px 17px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;gap:11px;background:#fff}
+.bot__av{width:36px;height:36px;border-radius:11px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bot__id strong{display:block;font-size:.925rem;font-weight:700;letter-spacing:-.018em}
+.bot__id small{font-size:.755rem;color:var(--wa);font-weight:600}
+.bot__x{margin-left:auto;width:32px;height:32px;border-radius:9px;border:none;background:var(--mist);color:var(--slate);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .16s}
+.bot__x:hover{background:var(--line-soft);color:var(--ink)}
+.bot__log{flex:1;overflow-y:auto;padding:18px 17px;background:var(--mist);display:flex;flex-direction:column;gap:11px}
+.msg{max-width:84%;padding:11px 14px;border-radius:15px;font-size:.885rem;line-height:1.5;animation:msgIn .26s var(--ease)}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg--bot{background:#fff;border:1px solid var(--line-soft);border-bottom-left-radius:5px;align-self:flex-start;color:var(--ink-2);box-shadow:var(--shadow-sm)}
+.msg--me{background:var(--blue);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:7px;padding:0 17px 14px;background:var(--mist);max-height:172px;overflow-y:auto}
+.chip{
+  padding:8px 14px;border-radius:var(--r-pill);border:1px solid var(--line);background:#fff;
+  font-size:.83rem;font-weight:500;color:var(--ink-2);cursor:pointer;transition:all .16s;
+}
+.chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-wash)}
+.chip--wa{border-color:#bfe4d0;color:var(--wa);font-weight:600}
+.bot__bar{padding:12px 14px;border-top:1px solid var(--line-soft);display:flex;gap:9px;background:#fff}
+.bot__bar input{flex:1;padding:10px 14px;border:1px solid var(--line);border-radius:var(--r-pill);font-size:.89rem}
+.bot__bar input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(5,121,189,.1)}
+.bot__send{width:40px;height:40px;flex-shrink:0;border:none;border-radius:50%;background:var(--blue);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .16s}
+.bot__send:hover{background:var(--blue-deep)}
+.bot__bar.is-hidden{display:none}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1024px){
+  .grid--4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2){border-right:none}
+  .step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .foot__grid{grid-template-columns:1fr 1fr}
+  .band__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .nav__links{display:none}
+  .nav__cta .btn--ghost{display:none}
+  .nav__burger{display:flex}
+  .nav__in{gap:14px}
+  .nav__cta{margin-left:auto}
+  .contact-grid{grid-template-columns:1fr}
+  .grid--3,.grid--2{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .grid--4,.grid--3,.grid--2{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:none;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .band__grid{grid-template-columns:1fr}
+  .foot__grid{grid-template-columns:1fr;gap:32px}
+  .field-row{grid-template-columns:1fr}
+  .btn{width:100%}
+  .btn-row{flex-direction:column;width:100%}
+  .nav__cta .btn{width:auto}
+  .mobile-panel .btn{width:100%}
+  .bot-btn{right:16px;bottom:82px;height:44px;font-size:.84rem}
+  .wa-float{right:16px;bottom:16px;width:50px;height:50px}
+}
+/* ============================================================
+   HOMEPAGE v2 — scoped to the home route only.
+   Nothing below is used by Services / Solutions / Portfolio /
+   About / Contact, so those pages render exactly as before.
+   ============================================================ */
+
+/* ---------- ambient background ---------- */
+.bg-glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(90px);z-index:0}
+.bg-glow--a{width:min(760px,94vw);height:540px;right:-14%;top:-20%;background:radial-gradient(circle,rgba(58,181,253,.15) 0%,rgba(58,181,253,0) 68%)}
+.bg-glow--b{width:min(560px,82vw);height:440px;left:-18%;bottom:-26%;background:radial-gradient(circle,rgba(58,181,253,.09) 0%,rgba(58,181,253,0) 70%)}
+.bg-grid{
+  position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.55;
+  background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
+  background-size:66px 66px;
+  -webkit-mask-image:radial-gradient(ellipse 86% 62% at 50% 4%,#000 24%,transparent 74%);
+  mask-image:radial-gradient(ellipse 86% 62% at 50% 4%,#000 24%,transparent 74%);
+}
+
+/* ---------- hero ---------- */
+.hero2{position:relative;overflow:hidden;padding-top:clamp(118px,14vw,168px);padding-bottom:clamp(66px,8vw,104px)}
+.hero2__grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(34px,5vw,64px);align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:9px;padding:7px 16px;border-radius:var(--r-pill);
+  background:rgba(255,255,255,.78);border:1px solid var(--line);box-shadow:var(--shadow-sm);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  font-size:.7rem;font-weight:700;letter-spacing:.115em;color:var(--slate);
+}
+.badge i{width:6px;height:6px;border-radius:50%;background:var(--blue);animation:pulseBlue 2.6s infinite}
+@keyframes pulseBlue{0%{box-shadow:0 0 0 0 rgba(58,181,253,.5)}70%{box-shadow:0 0 0 7px rgba(58,181,253,0)}100%{box-shadow:0 0 0 0 rgba(58,181,253,0)}}
+.hero2 h1{margin:24px 0 22px;font-size:clamp(2.45rem,5.5vw,4.05rem)}
+.hero2 h1 em{font-style:normal;color:var(--blue)}
+.hero2__copy .lead{max-width:52ch}
+.hero2__copy .btn-row{margin-top:32px}
+.hero2__caps{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--slate-2)}
+.go{display:inline-block;transition:transform .22s var(--ease)}
+.btn:hover .go{transform:translateX(4px)}
+
+/* ---------- hero backdrop visual (subtle, sits behind the orbit) ---------- */
+.hero2__backdrop{
+  position:absolute;z-index:1;pointer-events:none;
+  right:clamp(-60px,-4vw,-10px);top:50%;
+  width:min(560px,52vw);aspect-ratio:1/1;
+  transform:translateY(-50%);
+  opacity:.55;
+  -webkit-mask-image:radial-gradient(circle at 58% 50%,#000 46%,transparent 78%);
+  mask-image:radial-gradient(circle at 58% 50%,#000 46%,transparent 78%);
+}
+.hero2__backdrop svg{width:100%;height:100%;display:block}
+
+/* ---------- hero orbit visual ---------- */
+.orb{position:relative;z-index:2;aspect-ratio:1/1;min-height:376px}
+.orb__web{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.orb__ring{fill:none;stroke:var(--blue);stroke-width:1;opacity:.13;vector-effect:non-scaling-stroke;transform-origin:50% 50%}
+.orb__ring--path{opacity:.22;stroke-dasharray:.6 4;animation:orbSpin 46s linear infinite}
+@keyframes orbSpin{to{transform:rotate(360deg)}}
+.orb__link{stroke:var(--blue);stroke-width:1;opacity:.15}
+.orb__spark{fill:var(--blue);opacity:0}
+
+.orb__core{
+  position:absolute;left:50%;top:50%;width:104px;height:104px;margin:-52px 0 0 -52px;
+  border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  text-align:center;padding:10px;will-change:transform;z-index:2;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+  border:1px solid rgba(255,255,255,.95);
+  box-shadow:0 2px 6px rgba(11,27,51,.05),0 16px 38px rgba(58,181,253,.18);
+}
+.orb__core svg{width:28px;height:28px}
+.orb__core strong{font-size:.7rem;font-weight:700;letter-spacing:-.015em;line-height:1.22}
+
+/* each service sits on an even point of the ring; .oanchor is a
+   zero-size, JS-driven parallax anchor, .ocard centres itself on
+   that point with its own untouched transform */
+.oanchor{position:absolute;width:0;height:0;will-change:transform}
+.ocard{
+  position:absolute;left:0;top:0;transform:translate(-50%,-50%);
+  display:inline-flex;align-items:center;gap:6px;padding:7px 11px 7px 7px;
+  border-radius:var(--r-pill);white-space:nowrap;
+  font-size:.7rem;font-weight:600;letter-spacing:-.008em;color:var(--ink-2);
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(14px) saturate(170%);-webkit-backdrop-filter:blur(14px) saturate(170%);
+  border:1px solid rgba(255,255,255,.94);
+  box-shadow:0 1px 2px rgba(11,27,51,.04),0 12px 28px rgba(11,27,51,.10);
+  transition:transform .22s var(--ease),border-color .22s,box-shadow .22s;
+}
+.ocard:hover{transform:translate(-50%,-50%) translateY(-2px);border-color:rgba(5,121,189,.35);box-shadow:0 4px 10px rgba(5,121,189,.1),0 16px 34px rgba(11,27,51,.14)}
+.ocard__i{width:19px;height:19px;flex-shrink:0;border-radius:6px;background:var(--blue-wash);color:var(--blue);display:flex;align-items:center;justify-content:center}
+.ocard__i svg{width:12px;height:12px}
+
+.dust{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--blue);opacity:.2;animation:drift 9s ease-in-out infinite}
+.dust--1{top:13%;left:35%}
+.dust--2{top:64%;left:21%;width:4px;height:4px;animation-delay:1.4s}
+.dust--3{top:35%;left:75%;animation-delay:2.6s}
+.dust--4{top:82%;left:61%;width:3px;height:3px;animation-delay:3.8s}
+.dust--5{top:7%;left:67%;width:4px;height:4px;animation-delay:5s}
+@keyframes drift{0%,100%{transform:translateY(0);opacity:.18}50%{transform:translateY(-14px);opacity:.42}}
+
+/* ---------- capability strip ---------- */
+.cap{padding-block:clamp(56px,7vw,84px)}
+.cap .sec-head{text-align:center;margin-inline:auto;margin-bottom:clamp(30px,4vw,44px)}
+.cap__row{display:grid;grid-template-columns:repeat(auto-fit,minmax(124px,1fr));gap:6px;border:1px solid var(--line);border-radius:var(--r-lg);padding:10px;background:#fff;box-shadow:var(--shadow-sm)}
+.cap__item{
+  display:flex;flex-direction:column;align-items:center;gap:11px;padding:20px 8px;border-radius:13px;
+  font-size:.685rem;font-weight:700;letter-spacing:.075em;text-transform:uppercase;color:var(--slate);
+  text-align:center;transition:background .2s var(--ease),color .2s;
+}
+.cap__i{width:38px;height:38px;border-radius:11px;background:var(--mist);color:var(--slate-2);display:flex;align-items:center;justify-content:center;transition:background .22s var(--ease),color .22s,transform .22s var(--ease)}
+.cap__item:hover{background:var(--blue-wash);color:var(--blue-deep)}
+.cap__item:hover .cap__i{background:var(--blue);color:#fff;transform:translateY(-2px)}
+
+/* ---------- services preview ---------- */
+.svc-card{
+  position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r-card);padding:28px 24px 24px;
+  transition:border-color .24s var(--ease),box-shadow .28s var(--ease),transform .28s var(--ease);
+}
+.svc-card:hover{border-color:rgba(5,121,189,.4);box-shadow:0 4px 12px rgba(5,121,189,.06),0 24px 52px rgba(11,27,51,.09);transform:translateY(-4px)}
+.svc-card__n{position:absolute;top:26px;right:24px;font-size:.72rem;font-weight:700;letter-spacing:.06em;color:#c3cede;transition:color .22s}
+.svc-card:hover .svc-card__n{color:var(--blue)}
+.svc-card .ico{transition:background .24s var(--ease),color .24s,transform .24s var(--ease)}
+.svc-card:hover .ico{background:var(--blue);color:#fff;transform:translateY(-2px) rotate(-4deg)}
+.svc-card h3{margin-bottom:9px;padding-right:26px}
+.svc-card p{font-size:.885rem;line-height:1.55}
+.svc-card__go{margin-top:auto;padding-top:20px;color:var(--blue);font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:7px}
+.svc-card__go span{transition:transform .22s var(--ease)}
+.svc-card:hover .svc-card__go span{transform:translateX(5px)}
+
+/* ---------- why ---------- */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.why__c{
+  padding:clamp(26px,3.4vw,38px);border:1px solid var(--line);border-radius:var(--r-lg);
+  background:linear-gradient(158deg,#fff 0%,#f8fbff 100%);
+  transition:border-color .24s var(--ease),box-shadow .28s var(--ease),transform .28s var(--ease);
+}
+.why__c:hover{border-color:rgba(5,121,189,.32);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.why__k{font-size:.735rem;font-weight:700;letter-spacing:.145em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.why__c p{font-size:clamp(1rem,1.5vw,1.14rem);line-height:1.5;color:var(--ink-2);letter-spacing:-.014em}
+
+/* ---------- statement ---------- */
+.stmt{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,5vw,60px);align-items:center}
+.stmt h2{font-size:clamp(2.05rem,4.1vw,3.15rem)}
+.stmt__art{position:relative;aspect-ratio:1/.86;min-height:250px}
+.stmt__art span{
+  position:absolute;border-radius:24px;border:1px solid rgba(255,255,255,.9);
+  background:linear-gradient(150deg,rgba(255,255,255,.9),rgba(233,240,255,.72));
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 18px 44px rgba(11,27,51,.10);
+}
+.stmt__art span:nth-child(1){inset:14% 26% 30% 8%;transform:rotate(-8deg);display:flex;flex-direction:column;justify-content:center;gap:14%;padding:11%}
+.stmt__art span:nth-child(2){inset:22% 10% 18% 28%;transform:rotate(6deg);background:linear-gradient(150deg,rgba(58,181,253,.16),rgba(58,181,253,.05));display:flex;align-items:center;justify-content:center;gap:8%;padding:12%}
+.stmt__art span:nth-child(3){inset:44% 34% 6% 22%;transform:rotate(-3deg);overflow:hidden;display:flex;flex-direction:column;padding:10%}
+.stmt__art .sc-bar{display:flex;align-items:center;gap:5px;margin-bottom:auto}
+.stmt__art .sc-bar i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.stmt__art .sc-chart{display:flex;align-items:flex-end;gap:6%;height:52%;margin-top:8%}
+.stmt__art .sc-chart b{flex:1;display:block;border-radius:4px 4px 0 0;background:linear-gradient(180deg,rgba(58,181,253,.55),rgba(5,121,189,.85));opacity:.85}
+.stmt__art .sc-row{display:flex;align-items:center;gap:9%}
+.stmt__art .sc-avatar{width:19%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--blue-deep));opacity:.4;flex-shrink:0}
+.stmt__art .sc-lines{flex:1;display:flex;flex-direction:column;gap:16%}
+.stmt__art .sc-lines i{display:block;height:9%;border-radius:3px;background:var(--line)}
+.stmt__art .sc-lines i:last-child{width:58%;background:var(--line-soft)}
+.stmt__art .sc-node{width:27%;aspect-ratio:1;border-radius:30%;background:rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;color:var(--blue);box-shadow:0 4px 10px rgba(11,27,51,.08);flex-shrink:0}
+.stmt__art .sc-node svg{width:44%;height:44%}
+.stmt__art .sc-link{flex:1;height:2px;border-top:2px dashed rgba(5,121,189,.4);opacity:.7}
+
+/* ---------- process ---------- */
+.proc{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.proc::before{content:'';position:absolute;top:19px;left:19px;right:19px;height:1px;background:var(--line)}
+.proc__line{position:absolute;top:19px;left:19px;height:1px;width:0;background:var(--blue);opacity:.55;transition:width 1.5s var(--ease) .25s}
+.proc.in .proc__line{width:calc(100% - 38px)}
+.proc__s{position:relative;z-index:1}
+.proc__dot{
+  width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--blue);
+}
+.proc__s h3{font-size:1.02rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem}
+.proc__s p{font-size:.885rem;line-height:1.52}
+
+/* ---------- featured work invite ---------- */
+.invite{
+  border:1px dashed var(--line);border-radius:var(--r-card);background:var(--mist);
+  padding:34px 28px;display:flex;flex-direction:column;justify-content:center;
+}
+.invite h3{margin-bottom:9px}
+.invite p{font-size:.885rem;line-height:1.55;margin-bottom:20px}
+
+/* ---------- final CTA ---------- */
+.cta2{position:relative;overflow:hidden;text-align:center;padding-block:clamp(72px,9vw,116px);border-top:1px solid var(--line-soft)}
+.cta2__glow{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;
+  width:min(880px,120vw);height:520px;border-radius:50%;filter:blur(80px);
+  background:radial-gradient(circle,rgba(58,181,253,.13) 0%,rgba(58,181,253,0) 66%);
+}
+.cta2 .wrap{position:relative;z-index:1}
+.cta2 h2{margin-bottom:16px}
+.cta2 .lead{margin:0 auto 32px;max-width:50ch}
+.cta2 .btn-row{justify-content:center}
+
+/* ---------- micro contact ---------- */
+.micro{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
+  padding:clamp(24px,3vw,32px);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--mist);
+}
+.micro h3{font-size:1.16rem;margin-bottom:10px}
+.micro__lines{display:flex;flex-wrap:wrap;gap:8px 22px}
+.micro__lines a{font-size:.9rem;font-weight:500;color:var(--slate);transition:color .16s}
+.micro__lines a:hover{color:var(--blue)}
+
+/* ---------- homepage responsive ---------- */
+@media (max-width:1024px){
+  .proc{grid-template-columns:repeat(2,1fr);gap:30px}
+  .proc::before,.proc__line{display:none}
+}
+@media (max-width:900px){
+  .hero2__grid{grid-template-columns:1fr;gap:46px}
+  .orb{max-width:440px;margin-inline:auto;min-height:340px}
+  .hero2__backdrop{right:50%;transform:translate(50%,-50%);width:min(440px,86vw)}
+  .stmt{grid-template-columns:1fr}
+  .stmt__art{max-width:420px;margin-inline:auto}
+  .why{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  /* lighten the hero on phones: fewer moving parts, no blur layers */
+  .bg-grid{background-size:44px 44px;opacity:.4}
+  .bg-glow--b,.dust{display:none}
+  .hero2__backdrop{opacity:.35}
+  .orb{min-height:280px;aspect-ratio:1/.94}
+  .orb__core{width:82px;height:82px;margin:-41px 0 0 -41px;padding:7px;gap:4px;border-radius:14px;backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,255,255,.97)}
+  .orb__core svg{width:22px;height:22px}
+  .orb__core strong{font-size:.6rem}
+  .ocard{font-size:.62rem;padding:6px 9px 6px 6px;gap:5px;backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,255,255,.96)}
+  .ocard__i{width:16px;height:16px;border-radius:5px}
+  .ocard__i svg{width:10px;height:10px}
+  .cap__row{grid-template-columns:repeat(2,1fr)}
+  .proc{grid-template-columns:1fr;gap:24px}
+  .micro{flex-direction:column;align-items:flex-start}
+  .micro .btn-row{width:100%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a href="#/home" class="brand" aria-label="Business Catalyst home">
+      <img class="brand__mark" src="data:image/png;base64,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" alt="Business Catalyst" width="150" height="88" style="height:30px">
+      <span class="brand__name">Business <b>Catalyst</b><small>AI-Powered Business Solutions</small></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Main"></nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--wa btn--sm" id="navWa" href="#" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.5ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+        WhatsApp Us
+      </a>
+      <a class="btn btn--primary btn--sm" href="#/contact">Get Started</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel"></div>
+</header>
+
+<main id="app"></main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__about">
+        <a href="#/home" class="brand">
+          <img class="brand__mark" src="data:image/png;base64,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" alt="Business Catalyst" width="150" height="88" style="height:28px">
+      <span class="brand__name">Business <b>Catalyst</b><small>AI-Powered Business Solutions</small></span>
+        </a>
+        <p>We build AI-powered technology, automation, digital growth and BPO solutions for modern businesses.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul id="footCompany"></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul id="footServices"></ul>
+      </div>
+      <div class="foot__contact">
+        <h4>Contact</h4>
+        <a href="#" id="footWa" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.5ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+          +91 94584 58374
+        </a>
+        <a href="mailto:businesscatalystofficial@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+          businesscatalystofficial@gmail.com
+        </a>
+      </div>
+    </div>
+    <div class="foot__trust">
+      <span class="foot__trust-label">REGISTERED BUSINESS</span>
+      <span class="trust-chip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 4 6v6c0 5 3.4 8.5 8 9.5 4.6-1 8-4.5 8-9.5V6l-8-3.5Z"/><path d="m9 12 2 2 4-4"/></svg>
+        Proprietor: <b>Apoorv Mudgal</b>
+      </span>
+      <span class="trust-chip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>
+        GSTIN: <b>09IMGPM6408A1Z2</b>
+      </span>
+      <a class="trust-chip trust-chip--link" href="https://www.google.com/maps/place/?q=place_id:ChIJ88PD9Wp7DDkRJLB-tMzd4-g" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+        Google Profile: <b>★ 5.0</b>
+      </a>
+      <a class="trust-chip trust-chip--link" href="https://www.instagram.com/businesscatalyst_official" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a class="trust-chip trust-chip--link" href="https://www.linkedin.com/company/businesscatalystai/" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7.5" y1="10" x2="7.5" y2="16.5"/><circle cx="7.5" cy="6.8" r="1.1" fill="currentColor" stroke="none"/><path d="M11 16.5V10M11 12.6c0-1.5 1.1-2.6 2.5-2.6s2.5 1.1 2.5 2.6v3.9"/></svg>
+        LinkedIn
+      </a>
+      <a class="trust-chip trust-chip--link" href="https://wa.me/919458458374?text=Hello%20Business%20Catalyst%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#25D366"/><path fill="#fff" d="M23.5 8.5a10.4 10.4 0 0 0-16.4 12.5L6 27l6.2-1.6a10.4 10.4 0 0 0 15-9.3c0-2.8-1.1-5.4-3.1-7.4Zm-7.4 16h-.01a8.6 8.6 0 0 1-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3a8.7 8.7 0 1 1 16.1-4.6 8.7 8.7 0 0 1-8.8 8.6Zm4.8-6.5c-.3-.1-1.5-.7-1.8-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.2.2-.3.2-.5.1a7 7 0 0 1-2.1-1.3 7.8 7.8 0 0 1-1.4-1.8c-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="foot__bar">© 2026 Business Catalyst. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.5ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+</a>
+
+<button class="bot-btn" id="botBtn"><span class="bot-btn__dot"></span> Catalyst AI</button>
+
+<div class="bot" id="bot" role="dialog" aria-label="Catalyst AI assistant">
+  <div class="bot__top">
+    <div class="bot__av">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V4M9 12h.01M15 12h.01M9.5 15.5h5"/></svg>
+    </div>
+    <div class="bot__id"><strong>Catalyst AI</strong><small>Online</small></div>
+    <button class="bot__x" id="botX" aria-label="Close assistant">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="bot__log" id="botLog"></div>
+  <div class="chips" id="botChips"></div>
+  <div class="bot__bar is-hidden" id="botBar">
+    <input id="botInput" placeholder="Type your answer…" autocomplete="off">
+    <button class="bot__send" id="botSend" aria-label="Send">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG
+   ============================================================ */
+const WA_NUMBER = '919458458374';
+const EMAIL = 'businesscatalystofficial@gmail.com';
+const wa = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+const GENERIC_WA = 'Hello Business Catalyst, I would like to discuss a project.';
+const serviceWa = (s) => `Hello Business Catalyst, I am interested in ${s}. I would like to discuss my requirements.`;
+
+document.getElementById('waFloat').href = wa(GENERIC_WA);
+document.getElementById('navWa').href = wa(GENERIC_WA);
+document.getElementById('footWa').href = wa(GENERIC_WA);
+
+/* ============================================================
+   ICONS
+   ============================================================ */
+const I = {
+  bolt:'<path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z"/>',
+  users:'<path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7" r="3.4"/><path d="M22 20v-1.5a4 4 0 0 0-3-3.85M16.5 3.6a4 4 0 0 1 0 6.8"/>',
+  window:'<rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 9h19M6 6.5h.01M8.5 6.5h.01"/>',
+  phone:'<rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/>',
+  chat:'<path d="M21 12a8.5 8.5 0 0 1-11.9 7.8L3 21l1.3-5.2A8.5 8.5 0 1 1 21 12Z"/>',
+  target:'<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/>',
+  trend:'<path d="M3 17 9.5 10.5l4 4L21 7"/><path d="M15 7h6v6"/>',
+  head:'<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2.5" y="13.5" width="4" height="6.5" rx="2"/><rect x="17.5" y="13.5" width="4" height="6.5" rx="2"/><path d="M12 22h3.5a2 2 0 0 0 2-2"/>',
+  flow:'<rect x="2.5" y="3" width="7" height="6" rx="2"/><rect x="14.5" y="15" width="7" height="6" rx="2"/><path d="M6 9v5a4 4 0 0 0 4 4h4.5"/>',
+  card:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/>',
+  chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  brain:'<path d="M9.5 3.5A3 3 0 0 0 6.5 7a3 3 0 0 0-2 5.2A3 3 0 0 0 7 17.5a3 3 0 0 0 5 2 3 3 0 0 0 5-2 3 3 0 0 0 2.5-5.3A3 3 0 0 0 17.5 7a3 3 0 0 0-5.5-2"/><path d="M12 5.5v14"/>',
+  house:'<path d="m3 10 9-7 9 7v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5V10Z"/><path d="M9.5 21v-7h5v7"/>',
+  car:'<path d="M5 17h14M4.5 13 6 8.2A2 2 0 0 1 7.9 7h8.2a2 2 0 0 1 1.9 1.2L19.5 13"/><rect x="2.5" y="13" width="19" height="5" rx="2"/><path d="M6.5 18v1.5M17.5 18v1.5"/>',
+  cup:'<path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 9.5h1.5a2.5 2.5 0 0 1 0 5H17M6 4.5v-2M10 4.5v-2M14 4.5v-2"/>',
+  rocket:'<path d="M5 15c-1.5 1.5-2 6-2 6s4.5-.5 6-2a2.83 2.83 0 0 0-4-4Z"/><path d="M12.5 12.5 8 8s.5-6 8.5-7c1 8-7 8.5-7 8.5"/><path d="M15 9.5 19.5 14s-3 5-8 3"/>',
+  brief:'<rect x="2.5" y="7" width="19" height="13" rx="2.5"/><path d="M8.5 7V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2M2.5 12.5h19"/>',
+  layers:'<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5M3 17.5l9 5 9-5"/>',
+  db:'<ellipse cx="12" cy="6" rx="8.5" ry="3.5"/><path d="M3.5 6v12c0 1.9 3.8 3.5 8.5 3.5s8.5-1.6 8.5-3.5V6"/><path d="M3.5 12c0 1.9 3.8 3.5 8.5 3.5s8.5-1.6 8.5-3.5"/>',
+  mail:'<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/>',
+  shield:'<path d="M12 2.5 4 6v6c0 5 3.4 8.5 8 9.5 4.6-1 8-4.5 8-9.5V6l-8-3.5Z"/><path d="m9 12 2 2 4-4"/>',
+  search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  gear:'<circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/>'
+};
+const svg = (p, s=21) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+const arrow = '<span>→</span>';
+
+/* ============================================================
+   CONTENT DATA
+   ============================================================ */
+const PAGES = [
+  {id:'home', label:'Home'},
+  {id:'services', label:'Services'},
+  {id:'solutions', label:'Solutions'},
+  {id:'portfolio', label:'Portfolio'},
+  {id:'about', label:'About'},
+  {id:'contact', label:'Contact'}
+];
+
+const HOME_SERVICES = [
+  {i:I.bolt,   t:'AI & Automation',        d:'Intelligent systems that automate repetitive business operations.'},
+  {i:I.users,  t:'Custom CRM',             d:'Manage leads, customers, sales and follow-ups in one platform.'},
+  {i:I.window, t:'Website Development',    d:'Premium websites and custom web applications.'},
+  {i:I.phone,  t:'Mobile App Development', d:'Modern Android and iOS applications.'},
+  {i:I.chat,   t:'WhatsApp Automation',    d:'Automated customer communication and follow-ups.'},
+  {i:I.target, t:'Lead Generation',        d:'Generate and qualify potential customers.'},
+  {i:I.trend,  t:'Digital Marketing & SEO',d:'Build online visibility and long-term digital growth.'},
+  {i:I.head,   t:'BPO Services',           d:'Customer support, telecalling, data entry, back-office and operational support.'}
+];
+
+const CATEGORIES = [
+  {
+    name:'AI & Automation',
+    blurb:'Put intelligent systems to work on the tasks your team repeats every day.',
+    items:[
+      {i:I.brain, t:'AI Business Automation',      d:'Automate repetitive business processes using AI and intelligent workflows.'},
+      {i:I.chat,  t:'AI Chatbots',                 d:'24/7 AI-powered customer support and lead qualification.'},
+      {i:I.phone, t:'WhatsApp Business Automation',d:'Automate customer communication, notifications and follow-ups.'},
+      {i:I.flow,  t:'Workflow Automation',         d:'Connect business tools and eliminate repetitive manual work.'}
+    ]
+  },
+  {
+    name:'Technology & Software',
+    blurb:'Systems built around how your business actually runs, not around a template.',
+    items:[
+      {i:I.users, t:'Custom CRM Development',    d:'Lead management, customer management, sales pipeline, follow-ups and analytics.'},
+      {i:I.window,t:'Website Development',       d:'Corporate websites, dynamic websites, portals and web applications.'},
+      {i:I.phone, t:'Mobile App Development',    d:'Android and iOS applications designed for specific business requirements.'},
+      {i:I.card,  t:'Payment Gateway Integration',d:'Secure payment systems for websites and applications.'}
+    ]
+  },
+  {
+    name:'Digital Business Growth',
+    blurb:'Reach the right people, capture their interest and turn it into pipeline.',
+    items:[
+      {i:I.target,t:'Lead Generation',   d:'Generate, capture and qualify potential customers.'},
+      {i:I.trend, t:'Digital Marketing', d:'Social media marketing, campaigns, content and online growth.'},
+      {i:I.search,t:'SEO',               d:'Improve search visibility, organic traffic and online presence.'}
+    ]
+  },
+  {
+    name:'Data & Analytics',
+    blurb:'Make the numbers you already collect useful for the decisions you have to make.',
+    items:[
+      {i:I.chart, t:'Business Analytics',     d:'Turn business data into actionable insights.'},
+      {i:I.layers,t:'Dashboards & Reporting', d:'Create clear dashboards for business performance monitoring.'},
+      {i:I.db,    t:'Business Intelligence',  d:'Use data to make smarter business decisions.'}
+    ]
+  }
+];
+
+const BPO = [
+  {t:'Customer Support',            d:'Professional customer support and enquiry handling.'},
+  {t:'Telecalling & Voice Support', d:'Inbound and outbound calling for customer engagement, enquiries and business operations.'},
+  {t:'Lead Generation & Qualification', d:'Identify prospects, contact potential customers and qualify leads.'},
+  {t:'Data Entry & Data Management',d:'Accurate data entry, verification, updating and management.'},
+  {t:'Back Office Operations',      d:'Administrative and operational support.'},
+  {t:'CRM & Lead Management',       d:'Customer data, enquiries, follow-ups and sales coordination.'},
+  {t:'Email & Chat Support',        d:'Professional customer communication through email and chat.'},
+  {t:'Sales Support',               d:'Prospect follow-ups, appointment setting and customer coordination.'},
+  {t:'Virtual Business Assistance', d:'Additional operational support for growing businesses.'}
+];
+
+const SOLUTIONS = [
+  {i:I.house, t:'Real Estate',          d:'Capture site enquiries, route them to the right agent and follow up automatically until the visit is booked.', tags:['CRM','Lead Generation','WhatsApp Automation','Websites','Marketing']},
+  {i:I.car,   t:'Automotive',           d:'Take bookings online, keep every customer record in one place and confirm appointments without a phone call.', tags:['Booking Systems','Lead Management','CRM','Customer Communication']},
+  {i:I.cup,   t:'Restaurants',          d:'A site people can order from, plus the marketing that keeps tables filled on quiet weeknights.', tags:['Websites','Digital Ordering','Marketing','Customer Engagement']},
+  {i:I.rocket,t:'Startups',             d:'Ship the first version quickly, then grow the system as the product and the team grow.', tags:['Websites','Applications','Automation','Scalable Technology']},
+  {i:I.brief, t:'Professional Services',d:'Track every client conversation and stop losing enquiries between email, phone and WhatsApp.', tags:['CRM','Lead Management','Automation','Customer Communication']},
+  {i:I.gear,  t:'Growing Businesses',   d:'Replace the spreadsheets and manual handoffs with systems that hold up as volume increases.', tags:['Digital Transformation','Business Automation','BPO','Analytics']}
+];
+
+/* Real projects only. Add new entries here — the grid and filters update automatically.
+   Do not add placeholder or sample clients. */
+const WORK = [
+  {
+    name:'DelhiDrive',
+    industry:'Automotive / Car Rental',
+    desc:'Self-drive car rental platform with live booking, customer verification and a fleet management workflow — built and themed around the brand\'s own black-and-green identity.',
+    services:['Website Development','Booking System','Customer Management'],
+    tech:['Web Application','Database','Responsive UI'],
+    tags:['Websites'],
+    url:'https://delhidrive.in',
+    brand:{accent:'#22c55e', ink:'#0a0f0c'},
+    wordmark:true
+  }
+];
+const FILTERS = ['All','Websites','Apps','CRM','AI','Automation'];
+
+const SERVICE_OPTIONS = ['AI Automation','Custom CRM','Website Development','Mobile App Development','WhatsApp Automation','AI Chatbot','Lead Generation','Digital Marketing','SEO','Payment Gateway','Business Analytics','BPO Services','Customer Support','Telecalling','Data Entry','Back Office Support','Other'];
+
+/* ============================================================
+   SHARED BLOCKS
+   ============================================================ */
+const finale = () => `
+<section class="finale">
+  <div class="wrap rv">
+    <h2>Ready to build, automate and grow?</h2>
+    <p class="lead">Let's create a smarter digital future for your business.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="#/contact">Start your project</a>
+      <a class="btn btn--wa" href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">${waIcon()} Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>`;
+
+function waIcon(){
+  return '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.5ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>';
+}
+
+const pageHead = (title, lead) => `
+<section class="section" style="padding-bottom:0">
+  <div class="wrap rv" style="padding-top:clamp(48px,7vw,76px)">
+    <h1 style="max-width:18ch">${title}</h1>
+    <p class="lead" style="margin-top:20px">${lead}</p>
+  </div>
+</section>`;
+
+/* ============================================================
+   PAGE: HOME  (v2 — premium first impression)
+   ============================================================ */
+const HERO_ORBIT = [
+  {d:'30', i:I.bolt,   t:'AI Automation'},
+  {d:'46', i:I.users,  t:'Custom CRM'},
+  {d:'26', i:I.window, t:'Websites'},
+  {d:'40', i:I.phone,  t:'Mobile Apps'},
+  {d:'34', i:I.chat,   t:'WhatsApp'},
+  {d:'50', i:I.target, t:'Lead Generation'},
+  {d:'28', i:I.trend,  t:'Digital Marketing'},
+  {d:'44', i:I.head,   t:'BPO Services'}
+];
+
+const CAPS = [
+  {i:I.bolt,   t:'AI Automation'},
+  {i:I.users,  t:'Custom CRM'},
+  {i:I.window, t:'Websites'},
+  {i:I.phone,  t:'Mobile Apps'},
+  {i:I.chat,   t:'WhatsApp Automation'},
+  {i:I.target, t:'Lead Generation'},
+  {i:I.trend,  t:'Digital Marketing'},
+  {i:I.search, t:'SEO'},
+  {i:I.head,   t:'BPO Services'}
+];
+
+const SVC8 = [
+  {n:'01', i:I.brain,  t:'AI & Business Automation',            d:'Intelligent systems that take over the work your team repeats every day.'},
+  {n:'02', i:I.users,  t:'Custom CRM',                          d:'Leads, pipeline and follow-ups in one place your team will actually use.'},
+  {n:'03', i:I.window, t:'Website Development',                 d:'Premium websites and web applications built around how your business runs.'},
+  {n:'04', i:I.phone,  t:'Mobile App Development',              d:'Android and iOS apps designed for a specific job, not a generic template.'},
+  {n:'05', i:I.chat,   t:'WhatsApp Automation',                 d:'Reply, notify and follow up on the channel your customers already use.'},
+  {n:'06', i:I.target, t:'Lead Generation & Digital Marketing', d:'Reach the right people and turn that attention into qualified enquiries.'},
+  {n:'07', i:I.chart,  t:'SEO & Business Analytics',            d:'Get found in search, then use the numbers to decide what to do next.'},
+  {n:'08', i:I.head,   t:'BPO Services',                        d:'Support, telecalling, data entry and back-office handled by a trained team.'}
+];
+
+const WHY4 = [
+  {k:'Custom',      d:'Solutions designed around your business.'},
+  {k:'Intelligent', d:'AI-powered systems that reduce manual work.'},
+  {k:'Scalable',    d:'Technology that grows with your business.'},
+  {k:'End-to-end',  d:'Technology, automation, growth and BPO under one roof.'}
+];
+
+const PROC = [
+  {n:'01', t:'Discover',   d:'Understand your business.'},
+  {n:'02', t:'Strategize', d:'Find the right technology.'},
+  {n:'03', t:'Build',      d:'Develop the solution.'},
+  {n:'04', t:'Grow',       d:'Automate, optimize and scale.'}
+];
+
+const BPO_HOME = [
+  {t:'Customer Support',    d:'Enquiry handling that sounds like your business.'},
+  {t:'Telecalling',         d:'Inbound and outbound calling, trained on your offer.'},
+  {t:'Lead Generation',     d:'Prospecting and qualification before your team spends time.'},
+  {t:'Data Entry',          d:'Accurate entry, verification and record management.'},
+  {t:'Back Office',         d:'The administrative work that keeps operations moving.'},
+  {t:'Email & Chat Support',d:'Written support across your inbox and live channels.'}
+];
+
+/* shared project card — used by the homepage preview and the portfolio page.
+   w.brand{accent, ink} lets one project carry its own colours (e.g. DelhiDrive's
+   black-and-green identity) instead of the site's default blue, via CSS
+   custom properties scoped to that single card. */
+function workCard(w){
+  const style = w.brand ? ` style="--w-accent:${w.brand.accent};--w-ink:${w.brand.ink}"` : '';
+  const shot = w.wordmark
+    ? `<div class="work__shot work__shot--wordmark">
+        <div class="dd-word"><span class="dd-word__delhi">Delhi</span><span class="dd-word__drive">Drive</span></div>
+        <div class="dd-word__tag"><span>Move Ahead To Destiny</span></div>
+      </div>`
+    : `<div class="work__shot">
+        <div class="work__mock">
+          <div class="work__bar"><i></i><i></i><i></i></div>
+          <div class="work__body">
+            <div class="work__line work__line--t"></div>
+            <div class="work__line"></div>
+            <div class="work__line work__line--s"></div>
+            <div class="work__line work__line--x"></div>
+          </div>
+        </div>
+      </div>`;
+  return `
+    <article class="work${w.brand ? ' work--brand' : ''}"${style}>
+      ${shot}
+      <div class="work__info">
+        <div class="work__ind">${w.industry}</div>
+        <h3>${w.name}</h3>
+        <p>${w.desc}</p>
+        <div class="work__stack">${[...w.services, ...w.tech].map(t=>`<span>${t}</span>`).join('')}</div>
+        <a class="txtlink" href="${w.url || wa(`Hello Business Catalyst, I would like to know more about the ${w.name} project.`)}" target="_blank" rel="noopener">View project ${arrow}</a>
+      </div>
+    </article>`;
+}
+
+/* Hero visual: Business Catalyst fixed at the centre, with every
+   service arranged at an equal angle on one clean orbit ring around
+   it — spokes + travelling sparks read as the services "running
+   through" the core. Positions are computed once, not eyeballed,
+   so adding/removing a service keeps the ring even. */
+const ORBIT_R = 39;                         // ring radius, % of stage
+const ORBIT_POINTS = HERO_ORBIT.map((c,k)=>{
+  const step = (360 / HERO_ORBIT.length) * k;
+  const rad  = (step * Math.PI) / 180;      // 0° = top, clockwise
+  return {
+    ...c,
+    x: (50 + ORBIT_R * Math.sin(rad)).toFixed(2),
+    y: (50 - ORBIT_R * Math.cos(rad)).toFixed(2)
+  };
+});
+
+const orbit = () => `
+<div class="orb rv" id="stage">
+  <svg class="orb__web" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <circle class="orb__ring" cx="50" cy="50" r="19"/>
+    <circle class="orb__ring orb__ring--path" cx="50" cy="50" r="${ORBIT_R}"/>
+    ${ORBIT_POINTS.map((p,k)=>`
+      <line class="orb__link" x1="50" y1="50" x2="${p.x}" y2="${p.y}" vector-effect="non-scaling-stroke"/>
+      <circle class="orb__spark" cx="${p.x}" cy="${p.y}" r="0.9">
+        <animate attributeName="opacity" values="0;.6;0" dur="4.8s" begin="${(k*0.6).toFixed(2)}s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="0.9;2.4;0.9" dur="4.8s" begin="${(k*0.6).toFixed(2)}s" repeatCount="indefinite"/>
+      </circle>`).join('')}
+  </svg>
+
+  ${[1,2,3,4,5].map(k=>`<span class="dust dust--${k}"></span>`).join('')}
+
+  <div class="orb__core" data-depth="10">
+    <!-- PLACEHOLDER MARK — swap for the official Business Catalyst logo file -->
+    <svg width="34" height="34" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+      <rect width="36" height="36" rx="10" fill="#1657d8"/>
+      <path d="M19.6 8.5 11 19.2h5.4L15.2 27.5 24.4 16.4h-5.6l.8-7.9Z" fill="#fff"/>
+    </svg>
+    <strong>Business<br>Catalyst</strong>
+  </div>
+
+  ${ORBIT_POINTS.map(p=>`
+    <div class="oanchor" style="left:${p.x}%;top:${p.y}%" data-depth="${p.d}">
+      <div class="ocard"><span class="ocard__i">${svg(p.i,12)}</span>${p.t}</div>
+    </div>`).join('')}
+</div>`;
+
+function homePage(){
+  const feat = WORK.slice(0,3);
+  const invite = feat.length < 3 ? `
+    <div class="invite">
+      <h3>More work in progress</h3>
+      <p>New projects are added here as they go live. Yours could be the next one.</p>
+      <a class="btn btn--primary" href="#/contact">Start your project <span class="go">→</span></a>
+    </div>` : '';
+
+  return `
+<section class="hero2">
+  <div class="bg-glow bg-glow--a"></div>
+  <div class="bg-glow bg-glow--b"></div>
+  <div class="bg-grid"></div>
+  <div class="hero2__backdrop" aria-hidden="true">
+    <svg viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hbPanel" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity=".92"/>
+          <stop offset="100%" stop-color="#eaf5ff" stop-opacity=".55"/>
+        </linearGradient>
+        <linearGradient id="hbBar" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#3AB5FD" stop-opacity=".16"/>
+          <stop offset="100%" stop-color="#0579BD" stop-opacity=".55"/>
+        </linearGradient>
+      </defs>
+      <g transform="rotate(-7 280 280)">
+        <rect x="96" y="118" width="368" height="278" rx="22" fill="url(#hbPanel)" stroke="#ffffff" stroke-opacity=".9"/>
+        <line x1="126" y1="168" x2="434" y2="168" stroke="#dfe8f2" stroke-width="2"/>
+        <circle cx="140" cy="145" r="5" fill="#3AB5FD" opacity=".45"/>
+        <circle cx="160" cy="145" r="5" fill="#0579BD" opacity=".3"/>
+        <circle cx="180" cy="145" r="5" fill="#8593a6" opacity=".25"/>
+        <g>
+          <rect x="126" y="300" width="26" height="66" rx="5" fill="url(#hbBar)"/>
+          <rect x="164" y="268" width="26" height="98" rx="5" fill="url(#hbBar)" opacity=".85"/>
+          <rect x="202" y="238" width="26" height="128" rx="5" fill="url(#hbBar)" opacity=".7"/>
+          <rect x="240" y="282" width="26" height="84" rx="5" fill="url(#hbBar)" opacity=".55"/>
+        </g>
+        <polyline points="296,330 322,300 350,318 378,262 406,284 434,222" fill="none" stroke="#0579BD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <circle cx="434" cy="222" r="6" fill="#0579BD" opacity=".55"/>
+        <rect x="296" y="200" width="138" height="14" rx="7" fill="#eaf5ff"/>
+        <rect x="296" y="222" width="90" height="10" rx="5" fill="#eaf5ff"/>
+      </g>
+      <circle cx="470" cy="120" r="34" fill="#3AB5FD" opacity=".08"/>
+      <circle cx="90" cy="430" r="46" fill="#0579BD" opacity=".06"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="hero2__grid">
+      <div class="hero2__copy rv">
+        <div class="badge"><i></i>AI • AUTOMATION • TECHNOLOGY • GROWTH</div>
+        <h1>Transform your business<br>with <em>AI &amp; technology</em></h1>
+        <p class="lead">Business Catalyst builds intelligent digital solutions, automation systems and technology platforms that help businesses operate smarter, connect better and grow faster.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--magnet" href="#/contact">Start your project <span class="go">→</span></a>
+          <a class="btn btn--ghost btn--magnet" href="#/services">Explore our services</a>
+        </div>
+        <div class="hero2__caps">AI • Automation • CRM • Websites • Apps • Digital Growth • BPO</div>
+      </div>
+      ${orbit()}
+    </div>
+  </div>
+</section>
+
+<section class="cap">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Everything your business needs to grow</h2>
+    </div>
+    <div class="cap__row rv">
+      ${CAPS.map(c=>`
+        <div class="cap__item">
+          <span class="cap__i">${svg(c.i,19)}</span>
+          <span>${c.t}</span>
+        </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Build. Automate. Grow. Outsource.</h2>
+      <p class="lead">Complete technology and business solutions designed around your goals.</p>
+    </div>
+    <div class="grid grid--4 rv">
+      ${SVC8.map(s=>`
+        <article class="svc-card">
+          <span class="svc-card__n">${s.n}</span>
+          <div class="ico">${svg(s.i)}</div>
+          <h3>${s.t}</h3>
+          <p>${s.d}</p>
+          <a class="svc-card__go" href="#/services">Learn more <span>→</span></a>
+        </article>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Technology built around your business</h2>
+      <p class="lead">Four things we hold to on every engagement, whatever the stack ends up being.</p>
+    </div>
+    <div class="why rv">
+      ${WHY4.map(w=>`
+        <article class="why__c">
+          <div class="why__k">${w.k}</div>
+          <p>${w.d}</p>
+        </article>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap stmt rv">
+    <div>
+      <h2>Your business.<br>Powered by better technology.</h2>
+      <p class="lead" style="margin-top:20px">From your first website to intelligent automation, CRM, digital growth and business operations, Business Catalyst helps you build the infrastructure needed to scale.</p>
+      <div class="btn-row" style="margin-top:30px">
+        <a class="btn btn--primary btn--magnet" href="#/solutions">See what fits your business <span class="go">→</span></a>
+      </div>
+    </div>
+    <div class="stmt__art" aria-hidden="true">
+      <span>
+        <div class="sc-row"><span class="sc-avatar"></span><span class="sc-lines"><i></i><i></i></span></div>
+        <div class="sc-row"><span class="sc-avatar"></span><span class="sc-lines"><i></i><i></i></span></div>
+        <div class="sc-row"><span class="sc-avatar"></span><span class="sc-lines"><i></i><i></i></span></div>
+      </span>
+      <span>
+        <div class="sc-node">${svg('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z"/>')}</div>
+        <span class="sc-link"></span>
+        <div class="sc-node">${svg('<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>')}</div>
+        <span class="sc-link"></span>
+        <div class="sc-node">${svg('<path d="m20 6-11 11-5-5"/>')}</div>
+      </span>
+      <span>
+        <div class="sc-bar"><i></i><i></i><i></i></div>
+        <div class="sc-chart">
+          <b style="height:38%"></b><b style="height:64%"></b><b style="height:48%"></b><b style="height:82%"></b><b style="height:58%"></b>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>How we work</h2>
+      <p class="lead">Four stages, in order, from first conversation to a system that keeps improving.</p>
+    </div>
+    <div class="proc rv">
+      <span class="proc__line"></span>
+      ${PROC.map(p=>`
+        <div class="proc__s">
+          <div class="proc__dot">${p.n}</div>
+          <h3>${p.t}</h3>
+          <p>${p.d}</p>
+        </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Built to create impact</h2>
+      <p class="lead">Real products in production, not concept work.</p>
+    </div>
+    <div class="grid grid--3 rv">
+      ${feat.map(workCard).join('')}${invite}
+    </div>
+    <div class="rv" style="margin-top:30px">
+      <a class="txtlink" href="#/portfolio">See all work ${arrow}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap rv">
+    <div class="band">
+      <h2>Technology + business operations</h2>
+      <p class="lead" style="margin-top:16px">Build your technology, automate your workflows and outsource essential business operations with one trusted partner.</p>
+      <div class="band__grid">
+        ${BPO_HOME.map(b=>`<div class="band__item"><h4>${b.t}</h4><p>${b.d}</p></div>`).join('')}
+      </div>
+      <div class="band__cta btn-row">
+        <a class="btn btn--ghost" href="${wa(serviceWa('BPO Services'))}" target="_blank" rel="noopener">Discuss BPO requirements <span class="go">→</span></a>
+        <a class="btn btn--wa" href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">${waIcon()} Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta2">
+  <div class="cta2__glow"></div>
+  <div class="wrap rv">
+    <h2>Ready to build something better?</h2>
+    <p class="lead">Let's build, automate, grow and scale your business with technology that actually works.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary btn--magnet" href="#/contact">Start your project <span class="go">→</span></a>
+      <a class="btn btn--wa" href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">${waIcon()} Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;padding-bottom:clamp(58px,7vw,88px)">
+  <div class="wrap rv">
+    <div class="micro">
+      <div>
+        <h3>Have a project in mind?</h3>
+        <div class="micro__lines">
+          <a href="mailto:${EMAIL}">${EMAIL}</a>
+          <a href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">+91 94584 58374</a>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--ghost" href="mailto:${EMAIL}">Email us</a>
+        <a class="btn btn--wa" href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">${waIcon()} WhatsApp us</a>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+/* ============================================================
+   PAGE: SERVICES
+   ============================================================ */
+function servicesPage(){
+  const cats = CATEGORIES.map(cat => `
+    <div class="cat rv">
+      <div class="cat__head">
+        <h2>${cat.name}</h2>
+        <span class="cat__count">${cat.items.length} services</span>
+      </div>
+      <p class="lead" style="margin:-8px 0 26px">${cat.blurb}</p>
+      <div class="grid grid--${cat.items.length===3?'3':'4'}">
+        ${cat.items.map(s=>`
+          <article class="card">
+            <div class="ico">${svg(s.i)}</div>
+            <h3>${s.t}</h3>
+            <p>${s.d}</p>
+            <div style="margin-top:16px"><a class="txtlink" href="${wa(serviceWa(s.t))}" target="_blank" rel="noopener">Discuss this ${arrow}</a></div>
+          </article>`).join('')}
+      </div>
+    </div>`).join('');
+
+  return `
+${pageHead('Our services','Technology, automation, digital growth and operational solutions designed around your business.')}
+<section class="section" style="padding-top:clamp(28px,4vw,44px)">
+  <div class="wrap">${cats}</div>
+</section>
+
+<section class="section section--mist" style="padding-top:0;background:transparent;border:none">
+  <div class="wrap rv">
+    <div class="band">
+      <h2>BPO &amp; business process solutions</h2>
+      <p class="lead" style="margin-top:16px">Reliable business process outsourcing solutions designed to reduce operational workload, improve efficiency and help businesses focus on growth.</p>
+      <div class="band__grid">
+        ${BPO.map(b=>`<div class="band__item"><h4>${b.t}</h4><p>${b.d}</p></div>`).join('')}
+      </div>
+      <div class="band__cta btn-row">
+        <a class="btn btn--ghost" href="${wa(serviceWa('BPO Services'))}" target="_blank" rel="noopener">Discuss BPO requirements</a>
+      </div>
+    </div>
+  </div>
+</section>
+${finale()}`;
+}
+
+/* ============================================================
+   PAGE: SOLUTIONS
+   ============================================================ */
+function solutionsPage(){
+  return `
+${pageHead('Solutions designed for real businesses','Start from what the business needs to fix, not from a list of technologies. These are the combinations that tend to work.')}
+<section class="section" style="padding-top:clamp(34px,4.5vw,52px)">
+  <div class="wrap">
+    <div class="grid grid--3 rv">
+      ${SOLUTIONS.map(s=>`
+        <article class="card sol">
+          <div class="ico">${svg(s.i)}</div>
+          <h3>${s.t}</h3>
+          <p>${s.d}</p>
+          <div class="sol__tags">${s.tags.map(t=>`<span>${t}</span>`).join('')}</div>
+          <a class="txtlink" href="${wa(`Hello Business Catalyst, I run a business in ${s.t}. I would like to discuss my requirements.`)}" target="_blank" rel="noopener">Talk about ${s.t.toLowerCase()} ${arrow}</a>
+        </article>`).join('')}
+    </div>
+  </div>
+</section>
+${finale()}`;
+}
+
+/* ============================================================
+   PAGE: PORTFOLIO
+   ============================================================ */
+function portfolioPage(){
+  return `
+${pageHead('Our work','A selection of digital products, software solutions and business systems built by Business Catalyst.')}
+<section class="section" style="padding-top:clamp(34px,4.5vw,52px)">
+  <div class="wrap">
+    <div class="filters rv" id="filters">
+      ${FILTERS.map((f,i)=>`<button class="filter${i===0?' is-on':''}" data-f="${f}">${f}</button>`).join('')}
+    </div>
+    <div class="grid grid--3" id="workGrid"></div>
+  </div>
+</section>
+${finale()}`;
+}
+
+function renderWork(filter){
+  const grid = document.getElementById('workGrid');
+  if(!grid) return;
+  const list = filter === 'All' ? WORK : WORK.filter(w => w.tags.includes(filter));
+  if(!list.length){
+    grid.innerHTML = `
+      <div class="empty">
+        <h3>Nothing in ${filter} yet</h3>
+        <p>This category is empty. Tell us what you're planning and it could be the next project here.</p>
+        <a class="btn btn--primary" href="#/contact">Start your project</a>
+      </div>`;
+    return;
+  }
+  grid.innerHTML = list.map(workCard).join('');
+}
+
+/* ============================================================
+   PAGE: ABOUT
+   ============================================================ */
+function aboutPage(){
+  const focus = ['Artificial Intelligence','Automation','Software','CRM','Digital Transformation','Digital Marketing','BPO','Customer Experience','Business Growth'];
+  const steps = [
+    {n:'01', t:'Understand', d:'Understand the business and its challenges.'},
+    {n:'02', t:'Strategize', d:'Identify the right technology and growth opportunities.'},
+    {n:'03', t:'Build',      d:'Develop the required solution.'},
+    {n:'04', t:'Optimize',   d:'Improve and scale the system over time.'}
+  ];
+  const why = [
+    {i:I.brief, t:'Business first', d:'Technology should solve real business problems.'},
+    {i:I.brain, t:'AI ready',       d:'Use AI where it provides genuine business value.'},
+    {i:I.layers,t:'End-to-end',     d:'Technology, automation, marketing and operational support under one roof.'},
+    {i:I.trend, t:'Scalable',       d:'Build systems that can evolve with the business.'}
+  ];
+
+  return `
+${pageHead('Building technology that moves businesses forward','Business Catalyst helps businesses build, automate, digitize and grow through modern technology and business solutions.')}
+<section class="section" style="padding-top:clamp(30px,4vw,44px)">
+  <div class="wrap rv">
+    <div class="focus">${focus.map(f=>`<span>${f}</span>`).join('')}</div>
+  </div>
+</section>
+
+<section class="section section--mist" style="padding-top:clamp(52px,6vw,76px)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>How we work</h2>
+      <p class="lead">Four stages, in order, on every engagement.</p>
+    </div>
+    <div class="steps rv">
+      ${steps.map(s=>`
+        <div class="step">
+          <div class="step__n">${s.n}</div>
+          <h3>${s.t}</h3>
+          <p>${s.d}</p>
+        </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Why Business Catalyst</h2></div>
+    <div class="grid grid--4 rv">
+      ${why.map(w=>`
+        <article class="card">
+          <div class="ico">${svg(w.i)}</div>
+          <h3>${w.t}</h3>
+          <p>${w.d}</p>
+        </article>`).join('')}
+    </div>
+  </div>
+</section>
+${finale()}`;
+}
+
+/* ============================================================
+   PAGE: CONTACT
+   ============================================================ */
+function contactPage(){
+  return `
+${pageHead("Let's build your next digital solution","Tell us what you're trying to build, automate, grow or outsource. Our team will help you find the right solution.")}
+<section class="section" style="padding-top:clamp(34px,4.5vw,52px)">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="rv">
+        <div class="reach">
+          <div class="reach__label">WhatsApp</div>
+          <div class="reach__val">+91 94584 58374</div>
+          <a class="btn btn--wa btn--block" href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">${waIcon()} Chat on WhatsApp</a>
+        </div>
+        <div class="reach">
+          <div class="reach__label">Email</div>
+          <div class="reach__val">${EMAIL}</div>
+          <a class="btn btn--ghost btn--block" href="mailto:${EMAIL}">Send email</a>
+        </div>
+        <div class="reach">
+          <div class="reach__label">Prefer to talk it through?</div>
+          <p style="font-size:.9rem;margin-bottom:16px">Catalyst AI can take your requirements right now and pass them to the team.</p>
+          <button class="btn btn--ghost btn--block" onclick="openBot()">Open Catalyst AI</button>
+        </div>
+      </div>
+
+      <div class="rv">
+        <form class="form" id="enquiry" novalidate>
+          <div class="field-row">
+            <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name"><div class="err">Enter your name.</div></div>
+            <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization"><div class="err">Enter your business name.</div></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="f-phone">Phone number</label><input id="f-phone" name="phone" inputmode="tel" autocomplete="tel"><div class="err">Enter a valid phone number.</div></div>
+            <div class="field"><label for="f-email">Email address</label><input id="f-email" name="email" inputmode="email" autocomplete="email"><div class="err">Enter a valid email address.</div></div>
+          </div>
+          <div class="field">
+            <label for="f-service">Service required</label>
+            <select id="f-service" name="service">
+              <option value="">Select a service</option>
+              ${SERVICE_OPTIONS.map(s=>`<option>${s}</option>`).join('')}
+            </select>
+            <div class="err">Choose the service you need.</div>
+          </div>
+          <div class="field">
+            <label for="f-details">Project details</label>
+            <textarea id="f-details" name="details" placeholder="What are you trying to build, automate, grow or outsource?"></textarea>
+            <div class="err">Tell us a little about the project.</div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Send enquiry</button>
+          <p class="form__note">Prototype only — this form validates in the browser and does not send anything yet. Wire the submit handler to <code>POST /api/enquiry</code> to save the record and trigger both emails.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+${finale()}`;
+}
+
+/* ============================================================
+   ROUTER
+   ============================================================ */
+const VIEWS = {home:homePage, services:servicesPage, solutions:solutionsPage, portfolio:portfolioPage, about:aboutPage, contact:contactPage};
+
+function currentRoute(){
+  const id = (location.hash.replace('#/','') || 'home').split('?')[0];
+  return VIEWS[id] ? id : 'home';
+}
+
+function render(){
+  const id = currentRoute();
+  document.getElementById('app').innerHTML = VIEWS[id]();
+  document.title = id === 'home'
+    ? 'Business Catalyst | AI-Powered Business Solutions'
+    : `${PAGES.find(p=>p.id===id).label} | Business Catalyst`;
+
+  document.querySelectorAll('[data-nav]').forEach(a=>{
+    a.classList.toggle('is-active', a.dataset.nav === id);
+  });
+
+  closeMenu();
+  window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+
+  if(id === 'portfolio') initFilters();
+  if(id === 'contact')   initForm();
+  if(id === 'home'){ initParallax(); initMagnet(); }
+  observeReveals();
+}
+
+function buildNav(){
+  document.getElementById('navLinks').innerHTML =
+    PAGES.map(p=>`<a href="#/${p.id}" data-nav="${p.id}">${p.label}</a>`).join('');
+
+  document.getElementById('mobilePanel').innerHTML =
+    PAGES.map(p=>`<a class="m-link" href="#/${p.id}" data-nav="${p.id}">${p.label}</a>`).join('') +
+    `<div class="btn-row">
+       <a class="btn btn--primary" href="#/contact">Get started</a>
+       <a class="btn btn--wa" href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">${waIcon()} WhatsApp us</a>
+     </div>`;
+
+  document.getElementById('footCompany').innerHTML =
+    PAGES.map(p=>`<li><a href="#/${p.id}">${p.label}</a></li>`).join('');
+
+  document.getElementById('footServices').innerHTML =
+    ['AI Automation','Custom CRM','Website Development','Mobile Apps','WhatsApp Automation','Lead Generation','Digital Marketing','SEO','AI Chatbots','BPO Services']
+      .map(s=>`<li><a href="${wa(serviceWa(s))}" target="_blank" rel="noopener">${s}</a></li>`).join('');
+}
+
+/* ---------- nav behavior ---------- */
+const nav = document.getElementById('nav');
+const burger = document.getElementById('burger');
+function closeMenu(){ nav.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); }
+burger.addEventListener('click', ()=>{
+  const open = nav.classList.toggle('is-open');
+  burger.setAttribute('aria-expanded', String(open));
+});
+const onScroll = () => nav.classList.toggle('is-stuck', window.scrollY > 12);
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ---------- reveal ---------- */
+let io;
+function observeReveals(){
+  if(io) io.disconnect();
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+    return;
+  }
+  io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.08, rootMargin:'0px 0px -40px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}
+
+/* ---------- hero parallax ---------- */
+function initParallax(){
+  const stage = document.getElementById('stage');
+  if(!stage) return;
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  if(window.matchMedia('(hover:none)').matches) return;   // no parallax cost on touch devices
+
+  const layers = [...stage.querySelectorAll('[data-depth]')];
+  let raf = null, tx = 0, ty = 0;
+
+  function move(e){
+    const r = stage.getBoundingClientRect();
+    if(r.bottom < 0 || r.top > window.innerHeight) return;
+    tx = (e.clientX - (r.left + r.width/2)) / r.width;
+    ty = (e.clientY - (r.top + r.height/2)) / r.height;
+    if(!raf) raf = requestAnimationFrame(apply);
+  }
+  function apply(){
+    layers.forEach(el=>{
+      const d = parseFloat(el.dataset.depth) / 100;
+      el.style.transform = `translate3d(${(-tx*26*d).toFixed(2)}px, ${(-ty*20*d).toFixed(2)}px, 0)`;
+    });
+    raf = null;
+  }
+  function reset(){ layers.forEach(el=> el.style.transform = 'translate3d(0,0,0)'); }
+
+  window.addEventListener('mousemove', move, {passive:true});
+  stage.addEventListener('mouseleave', reset);
+}
+
+/* ---------- magnetic CTA buttons ---------- */
+function initMagnet(){
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  if(window.matchMedia('(hover:none)').matches) return;
+  document.querySelectorAll('.btn--magnet').forEach(b=>{
+    b.addEventListener('mousemove', (e)=>{
+      const r = b.getBoundingClientRect();
+      const x = (e.clientX - (r.left + r.width/2)) / r.width;
+      const y = (e.clientY - (r.top + r.height/2)) / r.height;
+      b.style.transform = `translate(${(x*7).toFixed(1)}px, ${(y*5).toFixed(1)}px)`;
+    });
+    b.addEventListener('mouseleave', ()=>{ b.style.transform = ''; });
+  });
+}
+
+/* ---------- portfolio filters ---------- */
+function initFilters(){
+  renderWork('All');
+  document.getElementById('filters').addEventListener('click', (e)=>{
+    const b = e.target.closest('.filter');
+    if(!b) return;
+    document.querySelectorAll('.filter').forEach(x=>x.classList.remove('is-on'));
+    b.classList.add('is-on');
+    renderWork(b.dataset.f);
+  });
+}
+
+/* ---------- contact form ---------- */
+function initForm(){
+  const form = document.getElementById('enquiry');
+  if(!form) return;
+
+  const rules = {
+    name:    v => v.trim().length >= 2,
+    business:v => v.trim().length >= 2,
+    phone:   v => (v.replace(/\D/g,'').length >= 8),
+    email:   v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+    service: v => v !== '',
+    details: v => v.trim().length >= 10
+  };
+
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const data = {};
+    let ok = true, firstBad = null;
+
+    Object.keys(rules).forEach(k=>{
+      const el = form.elements[k];
+      const wrapEl = el.closest('.field');
+      const valid = rules[k](el.value);
+      data[k] = el.value.trim();
+      wrapEl.classList.toggle('has-error', !valid);
+      if(!valid){ ok = false; firstBad = firstBad || el; }
+    });
+
+    if(!ok){ firstBad.focus(); return; }
+
+    /* --- BACKEND HOOK ------------------------------------------------
+       Replace this block with a real call. The endpoint should:
+         1. re-validate server-side and rate-limit by IP
+         2. insert the row into the enquiries table
+         3. email businesscatalystofficial@gmail.com
+            subject: "New Business Enquiry — Business Catalyst"
+         4. email the customer
+            subject: "Thank You for Contacting Business Catalyst"
+
+       await fetch('/api/enquiry', {
+         method:'POST',
+         headers:{'Content-Type':'application/json'},
+         body: JSON.stringify({ ...data, submittedAt: new Date().toISOString() })
+       });
+    ------------------------------------------------------------------ */
+    console.log('Enquiry captured (prototype):', {...data, submittedAt:new Date().toISOString()});
+
+    form.outerHTML = `
+      <div class="form done">
+        <div class="done__mark">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+        </div>
+        <h3>Thank you! Your enquiry has been received.</h3>
+        <p>Our team will contact you shortly. A confirmation has been sent to ${data.email}.</p>
+        <a class="btn btn--wa" href="${wa(serviceWa(data.service))}" target="_blank" rel="noopener">${waIcon()} Chat with us on WhatsApp</a>
+      </div>`;
+  });
+
+  form.addEventListener('input', (e)=>{
+    const f = e.target.closest('.field');
+    if(f) f.classList.remove('has-error');
+  });
+}
+
+/* ============================================================
+   CATALYST AI — scripted lead-capture flow
+   Deliberately not LLM-backed: it collects fixed fields, so it
+   can't invent pricing or promise delivery dates.
+   ============================================================ */
+const botEl   = document.getElementById('bot');
+const botLog  = document.getElementById('botLog');
+const botChips= document.getElementById('botChips');
+const botBar  = document.getElementById('botBar');
+const botInput= document.getElementById('botInput');
+
+const BPO_TYPES = ['Customer Support','Telecalling','Lead Generation','Data Entry','Back Office','Email Support','Chat Support','Sales Support','Virtual Assistance','Other'];
+
+const FLOW_BASE = [
+  {k:'service', q:"Hi! I'm Catalyst AI 👋 How can I help your business today?", type:'choice',
+   options:['I need a Website','I need a CRM','I need AI Automation','I need a Mobile App','I need WhatsApp Automation','I need Digital Marketing','I need SEO','I need Lead Generation','I need BPO Services','Talk to an Expert']},
+  {k:'name',    q:"Great. What's your name?", type:'text'},
+  {k:'business',q:'And your business name?', type:'text'},
+  {k:'phone',   q:'What number should we call or WhatsApp?', type:'text'},
+  {k:'email',   q:"What's your email address?", type:'text'},
+  {k:'details', q:'Briefly, what do you need built or handled?', type:'text'}
+];
+
+const FLOW_BPO = [
+  {k:'bpoType',   q:'What type of BPO support do you need?', type:'choice', options:BPO_TYPES},
+  {k:'volume',    q:'Roughly what work volume are you expecting?', type:'choice', options:['Under 100 / month','100–500 / month','500–2000 / month','2000+ / month','Not sure yet']},
+  {k:'team',      q:'How large a team do you think you need?', type:'choice', options:['1–2 people','3–5 people','6–10 people','10+ people','Not sure yet']},
+  {k:'supportType',q:'And what support type suits you best?', type:'choice', options:['Full time','Part time','Shift based','Project based','Not sure yet']}
+];
+
+let flow = [...FLOW_BASE], step = 0, answers = {};
+
+function botSay(text, who='bot'){
+  const d = document.createElement('div');
+  d.className = `msg msg--${who}`;
+  d.textContent = text;
+  botLog.appendChild(d);
+  botLog.scrollTop = botLog.scrollHeight;
+}
+
+function askStep(){
+  const s = flow[step];
+  if(!s) return finishBot();
+
+  botSay(s.q);
+  if(s.type === 'choice'){
+    botBar.classList.add('is-hidden');
+    botChips.innerHTML = s.options.map(o=>`<button class="chip" data-v="${o}">${o}</button>`).join('');
+  } else {
+    botChips.innerHTML = '';
+    botBar.classList.remove('is-hidden');
+    setTimeout(()=>botInput.focus(), 60);
+  }
+}
+
+function answer(value){
+  const s = flow[step];
+  if(!s) return;
+  const v = value.trim();
+  if(!v) return;
+
+  botSay(v, 'me');
+
+  if(s.k === 'service' && v === 'Talk to an Expert'){
+    botChips.innerHTML = '';
+    botBar.classList.add('is-hidden');
+    setTimeout(()=>{
+      botSay('Opening WhatsApp so you can speak to the team directly.');
+      botChips.innerHTML = `<a class="chip chip--wa" href="${wa(GENERIC_WA)}" target="_blank" rel="noopener">Open WhatsApp</a>
+                            <button class="chip" data-restart="1">Start over</button>`;
+    }, 400);
+    return;
+  }
+
+  answers[s.k] = v;
+
+  if(s.k === 'service' && /BPO/i.test(v)){
+    flow = [...FLOW_BASE, ...FLOW_BPO];
+  }
+
+  step++;
+  botChips.innerHTML = '';
+  botBar.classList.add('is-hidden');
+  setTimeout(askStep, 420);
+}
+
+function finishBot(){
+  botSay("Thanks! We've received your requirements. Our team will contact you shortly.");
+  const svc = (answers.service || '').replace(/^I need (a |an )?/i,'');
+  const summary = `Hello Business Catalyst, I submitted my requirements through Catalyst AI.
+Name: ${answers.name || '-'}
+Business: ${answers.business || '-'}
+Service: ${svc || '-'}
+Phone: ${answers.phone || '-'}
+Email: ${answers.email || '-'}
+Requirements: ${answers.details || '-'}${answers.bpoType ? `
+BPO type: ${answers.bpoType}
+Volume: ${answers.volume}
+Team size: ${answers.team}
+Support type: ${answers.supportType}` : ''}`;
+
+  /* BACKEND HOOK: POST `answers` to /api/chatbot-lead here. */
+  console.log('Catalyst AI lead (prototype):', answers);
+
+  botChips.innerHTML = `<a class="chip chip--wa" href="${wa(summary)}" target="_blank" rel="noopener">Talk to a human</a>
+                        <button class="chip" data-restart="1">Start over</button>`;
+  botBar.classList.add('is-hidden');
+}
+
+function resetBot(){
+  flow = [...FLOW_BASE]; step = 0; answers = {};
+  botLog.innerHTML = ''; botChips.innerHTML = '';
+  askStep();
+}
+
+function openBot(){
+  botEl.classList.add('is-open');
+  document.getElementById('botBtn').style.display = 'none';
+  if(!botLog.children.length) resetBot();
+}
+function closeBot(){
+  botEl.classList.remove('is-open');
+  document.getElementById('botBtn').style.display = '';
+}
+
+document.getElementById('botBtn').addEventListener('click', openBot);
+document.getElementById('botX').addEventListener('click', closeBot);
+botChips.addEventListener('click', (e)=>{
+  const chip = e.target.closest('.chip');
+  if(!chip) return;
+  if(chip.dataset.restart){ resetBot(); return; }
+  if(chip.dataset.v) answer(chip.dataset.v);
+});
+document.getElementById('botSend').addEventListener('click', ()=>{ answer(botInput.value); botInput.value=''; });
+botInput.addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ answer(botInput.value); botInput.value=''; }});
+document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && botEl.classList.contains('is-open')) closeBot(); });
+
+/* ============================================================
+   BOOT
+   ============================================================ */
+buildNav();
+render();
+onScroll();
+window.addEventListener('hashchange', render);
+</script>
+</body>
+</html>
